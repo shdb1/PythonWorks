@@ -19,17 +19,22 @@ def reverseNumber(Number):
 
 def beautifulDays(i, j, k):
     # Complete this function
-    beutifulDaysCount=0;
-    reversedDay=0;
-    isDataInt=10000;
-    for day in range(i,j+1):
-        reversedDay=reverseNumber(day);
-        divideResult=(reversedDay-day) / k;
-        isDataInt=isInt(divideResult);
-        if isDataInt==0 :
-            beutifulDaysCount=beutifulDaysCount+1;
-        
-    return beutifulDaysCount;        
+    if 1<=i<=j<=2000000:
+        if 1<=k<=2000000000:
+            beutifulDaysCount=0;
+            reversedDay=0;
+            isDataInt=10000;
+            for day in range(i,j+1):
+                reversedDay=reverseNumber(day);
+                divideResult=(reversedDay-day) / k;
+                isDataInt=isInt(divideResult);
+                if isDataInt==0 :
+                    beutifulDaysCount=beutifulDaysCount+1;
+            return beutifulDaysCount; 
+        else:
+            return 0;
+    else:
+        return 0;
         
         
         
