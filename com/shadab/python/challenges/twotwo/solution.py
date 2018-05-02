@@ -17,12 +17,15 @@ def is_square(apositiveint):
   return True
 
 def isPowerOfTwo(n):
-    if (n == 0):
+    if n[len(n)-1]==0:
+        return False;
+    numberTocheck=int(n);
+    if (numberTocheck == 0):
         return False
-    while (n != 1):
-            if (n % 2 != 0):
+    while (numberTocheck != 1):
+            if (numberTocheck % 2 != 0):
                 return False
-            n = n // 2
+            numberTocheck = numberTocheck // 2
              
     return True
 
@@ -56,7 +59,7 @@ def twoTwo(a):
     toTalTwoTwo=0;
     while(index<len(groupData)):
         startWithZero=checkGroupStartWithZero(groupData[index]);
-        isSquare=isPowerOfTwo(int(groupData[index]));
+        isSquare=isPowerOfTwo(groupData[index]);
         if(isSquare and startWithZero==False):
             toTalTwoTwo=toTalTwoTwo+1;
         index=index+1;
