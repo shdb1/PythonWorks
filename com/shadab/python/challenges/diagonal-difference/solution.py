@@ -8,16 +8,16 @@ import sys
 
 # Complete the diagonalDifference function below.
 def diagonalDifference(count,a):
-    digonal1=0;
-    digonal2=0;
+    diagonal1=0;
+    diagonal2=0;
     for n in range(0,count):
-        digonal1=digonal1+a[n][n];
+        diagonal1=diagonal1+a[n][n];
 #        print(n,count,count-n-1);
-        digonal2=digonal2+a[n][count-n-1];
-    digonal2=digonal2-digonal1;
-    if digonal2<0:
-        digonal2=digonal2*(-1);
-    return digonal2;
+        diagonal2=diagonal2+a[n][count-n-1];
+    diagonal2=diagonal2-diagonal1;
+    if diagonal2<0:
+        diagonal2=diagonal2*(-1);
+    return diagonal2;
          
 
 if __name__ == '__main__':
